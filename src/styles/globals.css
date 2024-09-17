@@ -1,3 +1,31 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  --pretty-nav-index: -1;
+}
+
+body:has([data-pretty-nav-index="0"]:target) {
+  --pretty-nav-index: 0;
+}
+
+body:has([data-pretty-nav-index="1"]:target) {
+  --pretty-nav-index: 1;
+}
+
+body:has([data-pretty-nav-index="2"]:target) {
+  --pretty-nav-index: 2;
+}
+
+body:has([data-pretty-nav-index="3"]:target) {
+  --pretty-nav-index: 3;
+}
+
+body:has([data-pretty-nav-index="0"]:target) .pretty-nav-icon-0,
+body:has([data-pretty-nav-index="1"]:target) .pretty-nav-icon-1,
+body:has([data-pretty-nav-index="2"]:target) .pretty-nav-icon-2,
+body:has([data-pretty-nav-index="3"]:target) .pretty-nav-icon-3 {
+  padding: 0 1rem 1rem 1rem;
+  color: white;
+}
